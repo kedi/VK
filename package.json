@@ -2,7 +2,7 @@
   "name": "toasty-vk",
   "version": "1.0.0",
   "description": "Toasty#0001 tarafından hazırlanan Vampir Köylü botu.",
-  "main": ".eslintrc.js",
+  "main": "app.js",
   "dependencies": {
     "discord.js": "^12.5.3",
     "dotenv": "^8.2.0",
