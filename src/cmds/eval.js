@@ -10,7 +10,7 @@ class evalCmd extends baseCmd {
         })
     }
     async execute(client, message, args, server) {
-        if (!["478307244509888532"].includes(message.author.id)) return;
+        if (!client.settings.MANAGEMENT.BotOwners.includes(message.author.id)) return;
         function clean(text, token) {
             if (typeof text === 'string') {
                 text = text.replace(/`/g, `\`${String.fromCharCode(8203)}`).replace(/@/g, `@${String.fromCharCode(8203)}`);
