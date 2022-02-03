@@ -29,7 +29,7 @@ class rollerCmd extends baseCmd {
             return message.channel.send(`Rol dağıtımı uygun formatta kullanılmadı. Formata uymayan argümanlar:\n\n${FalseRegex.map(el => `• ${el}`).join("\n")}\n\nÖrnek Kullanım: **${client.settings.MANAGEMENT.Prefix}roller 5Büyücü 6Vampir 3Köylü**`)
         }
 
-        let TotalRoleCount = args.map(x => parseInt(x)).reduce((a,b) => a+b)
+        let TotalRoleCount = args.length > 0 ? (args.map(x => parseInt(x)).reduce((a,b) => a+b)) : 0
         let VoiceChannel = await client.channels.cache.get(GameInfo.VoiceID)
 
         if(!VoiceChannel || VoiceChannel.type !== "voice"){
